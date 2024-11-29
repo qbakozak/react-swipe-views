@@ -5,6 +5,6 @@ import packageJson from '../package.json'
 addons.setConfig({
   theme: create({
     base: 'dark',
-    brandTitle: `react-swipe-views - Version ${packageJson.version}`,
+    brandTitle: `@qbakozak/react-swipe-views - Version ${packageJson.version}`,
   }),
 })

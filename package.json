@@ -1,6 +1,6 @@
 {
   "name": "@qbakozak/react-swipe-views",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A React 18 component for swipeable views",
   "author": "",
   "engines": {
@@ -26,7 +26,7 @@
       "import": "./lib/index.es.js",
       "require": "./lib/index.cjs.js"
     },
-    "./styles": "./lib/css/swipe-view.min.css"
+    "./styles": "./lib/css/react-swipe-view.min.css"
   },
   "files": [
     "/lib",

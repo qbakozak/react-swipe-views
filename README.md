@@ -8,16 +8,16 @@ A replacement package for react-swipeable-views with the support for React 18, f
 
 Install like any other npm package:
 ```sh
-npm install --save react-swipe-views
+npm install --save @qbakozak/react-swipe-views
 ```
 
 ## Use
 
-### Base library
+### Base library - SwipeViews
 
 ```ts
-import React from 'react'
-import SwipeViews from 'react-swipe-views'
+import React, { FC } from 'react'
+import SwipeViews from '@qbakozak/react-swipe-views'
 
 const styles = {
   slide: {
@@ -36,17 +36,45 @@ const styles = {
   },
 }
 
-export const App = () => (
-  <SwipeViews>
-    <div style={ ...styles.slide, ...styles.slide1 }>
-      slide n°1
-    </div>
-    <div style={ ...styles.slide, ...styles.slide2 }>
-      slide n°2
-    </div>
-    <div style={ ...styles.slide, ...styles.slide3 }>
-      slide n°3
-    </div>
-  </SwipeViews>
+export const App: FC = () => (
+
+  return (
+    <SwipeViews>
+      <div style={ ...styles.slide, ...styles.slide1 }>
+        slide n°1
+      </div>
+      <div style={ ...styles.slide, ...styles.slide2 }>
+        slide n°2
+      </div>
+      <div style={ ...styles.slide, ...styles.slide3 }>
+        slide n°3
+      </div>
+    </SwipeViews>
+  )
 )
+```
+
+### Base library - SwipeViewsVirtual
+
+```ts
+import React, { FC } from 'react'
+import SwipeViewsVirtual from '@qbakozak/react-swipe-views'
+
+export const App: FC = () => (
+  const [index, setIndex] = useState(25)
+
+  const renderSlides = (props: { index: number; key: number }) => {
+    // Render slide as JSX.Element here
+  }
+
+  return (
+    <SwipeViewsVirtual
+      {...args}
+      index={index}
+      onChangeIndex={setIndex}
+      slideRenderer={renderSlides}
+      slideCount={50}
+    />
+  )
+}
 ```
