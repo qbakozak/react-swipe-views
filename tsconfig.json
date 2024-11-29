@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./lib",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "allowJs": false,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    
+    /* Bundler mode */
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "jsx": "react",
+    
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+
+    "types": ["@testing-library/jest-dom", "jest", "./src/vite-env.d.ts"],
+  },
+  "include": [
+    "src/**/*.*",
+    "src/index.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "public",
+    "dist",
+    "build",
+    "scripts",
+    "src/**/*.stories.*",
+    "src/**/*.mdx",
+  ],
+}
